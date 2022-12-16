@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="14dp"
+    tools:context=".ui.payment.DetailPaymentActivity">
+
+<!--    <TextView-->
+<!--        android:id="@+id/title"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:text="Complete booking"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textStyle="bold" />-->
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Personal Information"
+        android:textColor="@color/label"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/topDetail"
+        android:layout_below="@id/tvInfo"
+        android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="6dp">
+
+            <TextView
+                android:id="@+id/titleName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:text="Name"
+                android:textColor="@color/text" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleName"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:text="Jone Doe, 24"
+                android:textColor="@color/label"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/underline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_marginTop="-4dp"
+                android:background="@drawable/underline" />
+
+            <TextView
+                android:id="@+id/titlePhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/underline"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:text="Phone Number"
+                android:textColor="@color/text"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titlePhone"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="2dp"
+                android:text="088228659668"
+                android:textColor="@color/text"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/titleSeats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/underline"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@id/titlePhone"
+                android:text="Seats"
+                android:textColor="@color/text"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/seats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleSeats"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/titlePhone"
+                android:text="4"
+                android:textColor="@color/text"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="34dp"
+                android:layout_below="@+id/titleName"
+                android:background="@drawable/custom_ractangle" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topDetail"
+        android:layout_marginTop="12dp"
+        android:text="Payment Method"
+        android:textColor="@color/label"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/midDetail"
+        android:layout_below="@id/tvPay"
+        android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/titleBus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="14dp"
+                android:text="PO Name"
+                android:textColor="@color/text" />
+
+
+            <TextView
+                android:id="@+id/nameBus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleBus"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="6dp"
+                android:text="Sempati Star"
+                android:textColor="@color/label"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/titleSchedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nameBus"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="14dp"
+                android:text="Schedule"
+                android:textColor="@color/text" />
+
+            <TextView
+                android:id="@+id/departTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleSchedule"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="2dp"
+                android:text="18:30"
+                android:textColor="@color/label"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleSchedule"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/titleSchedule"
+                android:text="Semarang"
+                android:textColor="@color/label"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fromTerminal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/from"
+                android:layout_marginStart="12dp"
+                android:textSize="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@id/titleSchedule"
+                android:text="Terminal Terboyo"
+                android:textColor="@color/text" />
+
+            <TextView
+                android:id="@+id/fromTgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fromTerminal"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@id/titleSchedule"
+                android:text="23 Jul 2019"
+                android:textColor="@color/label" />
+
+            <TextView
+                android:id="@+id/arrivalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fromTgl"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="14dp"
+                android:text="05:30"
+                android:textColor="@color/label"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/to"
+                android:layout_toRightOf="@id/titleSchedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fromTgl"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="14dp"
+                android:text="Kudus"
+                android:textColor="@color/label"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/toTerminal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/to"
+                android:layout_marginStart="12dp"
+                android:textSize="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@id/titleSchedule"
+                android:text="Terminal Bakwean"
+                android:textColor="@color/text" />
+
+            <TextView
+                android:id="@+id/toTgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toTerminal"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/titleSchedule"
+                android:text="24 Jul 2019"
+                android:textColor="@color/label" />
+
+            <TextView
+                android:id="@+id/titlePlat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="14dp"
+                android:layout_toRightOf="@id/titleBus"
+                android:text="Bus No."
+                android:textColor="@color/text" />
+
+            <TextView
+                android:id="@+id/platBus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titlePlat"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="6dp"
+                android:layout_toRightOf="@id/titleBus"
+                android:text="P 9123 NN"
+                android:textColor="@color/label" />
+
+            <TextView
+                android:id="@+id/titleEstimasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nameBus"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="14dp"
+                android:layout_toRightOf="@id/titleBus"
+                android:text="Estimated Time"
+                android:textColor="@color/text" />
+
+            <TextView
+                android:id="@+id/estimasiTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleSchedule"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/titleBus"
+                android:text="13h45m"
+                android:textColor="@color/label"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/titleSeatsNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fromTgl"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="14dp"
+                android:layout_toRightOf="@id/titleBus"
+                android:text="Seat No"
+                android:textColor="@color/text" />
+
+            <TextView
+                android:id="@+id/seatNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleSeatsNo"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/titleBus"
+                android:text="9, 10"
+                android:textColor="@color/label"
+                android:textStyle="bold" />
+
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="26dp"
+                android:layout_below="@+id/titleBus"
+                android:background="@drawable/custom_ractangle_yel" />
+
+            <RelativeLayout
+                android:id="@+id/rtBiaya"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toTgl"
+                android:background="@color/bg"
+                android:padding="14dp">
+
+                <TextView
+                    android:id="@+id/tvTiket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:text="Tickets"
+                    android:textColor="@color/label"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tiket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="14dp"
+                    android:text="2x Rp 166.000,00"
+                    android:textColor="@color/text" />
+
+                <TextView
+                    android:id="@+id/tvCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTiket"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Unique Kode"
+                    android:textColor="@color/label"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tiket"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="14dp"
+                    android:text="333"
+                    android:textColor="@color/secondary" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rtBiaya"
+                android:background="@color/primary"
+                android:padding="14dp">
+
+                <TextView
+                    android:id="@+id/titleTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:text="Total"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="14dp"
+                    android:text="Rp 3.320.000"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/midDetail"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:text="CONTINUE TO PAYMENT" />
+
+
+
+</RelativeLayout>

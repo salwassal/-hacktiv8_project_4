@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="340dp"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="14dp"
+    android:layout_centerHorizontal="true"
+    android:layout_margin="10dp"
+    android:padding="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="40dp"
+        android:paddingVertical="10dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="How was your trip?"
+            android:textColor="@color/label"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvHow"
+            android:layout_below="@id/tvTitle"
+            android:layout_width="200dp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="12dp"
+            android:text="You’ve been completed your trip with this detail" />
+
+
+        <TextView
+            android:id="@+id/jdlName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvHow"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="PO Name"
+            android:textAlignment="center"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/jdlBus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvHow"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/jdlName"
+            android:text="Bus No"
+            android:textAlignment="center"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jdlName"
+            android:layout_marginStart="10dp"
+            android:text="Sempati Star"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/idBus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jdlName"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/jdlName"
+            android:text="P 9998 NN"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/jdlDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jdlName"
+            android:layout_marginTop="80dp"
+            android:layout_marginStart="10dp"
+            android:text="Departure Date"
+            android:textAlignment="center"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/jdlStatus"
+            android:layout_below="@id/jdlName"
+            android:layout_toRightOf="@id/jdlName"
+            android:layout_marginStart="100dp"
+            android:layout_width="wrap_content"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:textSize="12dp"
+            android:text="Ticket Status" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jdlDate"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:text="25 Jul 2022"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgStatus"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/jdlDate"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/jdlName"
+            android:src="@drawable/verified" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jdlDate"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="12dp"
+            android:layout_toRightOf="@id/imgStatus"
+            android:textColor="#4FCA54"
+            android:textStyle="bold"
+            android:text="Issued" />
+
+        <TextView
+            android:id="@+id/tvRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jdlDate"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="64dp"
+            android:layout_marginBottom="14dp"
+            android:text="Please give your rating"
+            android:textAlignment="center"
+            android:textSize="12dp" />
+
+        <CheckedTextView
+            android:id="@+id/ctvStar1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/tvRating"
+            android:layout_toLeftOf="@id/ctvStar2"
+            android:background="@drawable/rating"
+            android:backgroundTint="@color/secondary" />
+
+        <CheckedTextView
+            android:id="@+id/ctvStar2"
+            android:layout_toLeftOf="@id/ctvStar3"
+            android:layout_below="@id/tvRating"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:backgroundTint="@color/secondary"
+            android:background="@drawable/rating" />
+
+        <CheckedTextView
+            android:id="@+id/ctvStar3"
+            android:layout_below="@id/tvRating"
+            android:layout_centerHorizontal="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:backgroundTint="@color/secondary"
+            android:background="@drawable/rating" />
+
+        <CheckedTextView
+            android:id="@+id/ctvStar4"
+            android:layout_toRightOf="@id/ctvStar3"
+            android:layout_below="@id/tvRating"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:backgroundTint="@color/secondary"
+            android:background="@drawable/rating" />
+
+        <CheckedTextView
+            android:id="@+id/ctvStar5"
+            android:layout_toRightOf="@id/ctvStar4"
+            android:layout_below="@id/tvRating"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:backgroundTint="@color/secondary"
+            android:background="@drawable/rating" />
+
+        <TextView
+            android:id="@+id/btnRate"
+            android:layout_below="@+id/ctvStar3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:padding="12dp"
+            android:textColor="@color/primary"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text="RATE THIS TRIP" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

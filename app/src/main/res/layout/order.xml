@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="20dp"
+    app:cardCornerRadius="12dp"
+    android:padding="12dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/topTicket"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/primaryLight"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tgl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:text="-"
+                android:textColor="@color/lightGrey"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/jam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:layout_toRightOf="@id/tgl"
+                android:text="00:00"
+                android:textColor="@color/lightGrey"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/noBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="24dp"
+                android:layout_toRightOf="@id/jam"
+                android:text="Book No."
+                android:textColor="@color/lightGrey"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/idTicket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/noBook"
+                android:text="230719-0001"
+                android:textSize="14sp"
+                android:textColor="@color/secondaryGrey" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/nameBus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topTicket"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="-"
+            android:textColor="@color/primary"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/timeBus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameBus"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="00:00"
+            android:textColor="@color/label"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/platBus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topTicket"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/nameBus"
+            android:text="-"
+            android:textColor="@color/text" />
+
+        <TextView
+            android:id="@+id/terminalBus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/platBus"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/timeBus"
+            android:text="-"
+            android:textColor="@color/text" />
+
+        <TextView
+            android:id="@+id/destBus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/terminalBus"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/timeBus"
+            android:text="-"
+            android:textColor="@color/text" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/nameBus"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/status"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/verified" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameBus"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:text="unknown"
+            android:textColor="#4FCA54"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

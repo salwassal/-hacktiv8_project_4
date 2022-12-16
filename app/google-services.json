@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1007433435327",
+    "project_id": "bus-travel-c1b52",
+    "storage_bucket": "bus-travel-c1b52.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1007433435327:android:420c60a23b85d943759e0a",
+        "android_client_info": {
+          "package_name": "com.hacktiv8.bux"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1007433435327-a6tecgba09d87pddn5kth02tro0up85a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hacktiv8.bux",
+            "certificate_hash": "19f4c84fc9d71efcc78e756e218cabfd61bd92bf"
+          }
+        },
+        {
+          "client_id": "1007433435327-bmpet2nhsk1s44he7rjgnmnjqml89gnd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAShwc2iHfnh1F7wjCemHW69es_t8C7VZg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1007433435327-bmpet2nhsk1s44he7rjgnmnjqml89gnd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

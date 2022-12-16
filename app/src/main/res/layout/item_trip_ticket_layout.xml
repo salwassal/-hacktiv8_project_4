@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="8dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvBusName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bus Name"
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvBusNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="P 1923 NM"
+            android:textColor="@color/text"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tvBusName"
+            app:layout_constraintTop_toBottomOf="@+id/tvBusName" />
+
+        <TextView
+            android:id="@+id/tvDepartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Fri, 23 Jul 2019"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvDepartHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="17:35"
+            android:textSize="16sp"
+            android:textColor="@color/label"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvBusNo"
+            app:layout_constraintTop_toBottomOf="@+id/tvBusNo" />
+
+        <TextView
+            android:id="@+id/tvDepartStation"
+            android:layout_width="wrap_content"
+            android:maxWidth="172dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="Terminal Amplas"
+            android:textColor="@color/text"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDepartHour"
+            app:layout_constraintStart_toEndOf="@+id/tvDepartHour"
+            app:layout_constraintTop_toTopOf="@+id/tvDepartHour" />
+
+        <TextView
+            android:id="@+id/tvDepartCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="172dp"
+            android:text="Medan"
+            android:textColor="@color/text"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tvDepartStation"
+            app:layout_constraintTop_toBottomOf="@+id/tvDepartStation" />
+
+        <ImageView
+            android:id="@+id/line"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/vct_line_vertical"
+            app:layout_constraintEnd_toEndOf="@+id/tvDepartHour"
+            app:layout_constraintStart_toStartOf="@+id/tvDepartHour"
+            app:layout_constraintTop_toBottomOf="@+id/tvDepartHour" />
+
+        <TextView
+            android:id="@+id/tvArriveHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="09:10"
+            android:textColor="@color/label"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvBusNo"
+            app:layout_constraintTop_toBottomOf="@+id/line" />
+
+        <TextView
+            android:id="@+id/tvArriveStation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="172dp"
+            android:layout_marginStart="32dp"
+            android:text="Terminal Bandaraya"
+            android:textColor="@color/text"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvArriveHour"
+            app:layout_constraintStart_toEndOf="@+id/tvArriveHour"
+            app:layout_constraintTop_toTopOf="@+id/tvArriveHour" />
+
+        <TextView
+            android:id="@+id/tvArriveCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="172dp"
+            android:text="Riau"
+            android:textColor="@color/text"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tvArriveStation"
+            app:layout_constraintTop_toBottomOf="@+id/tvArriveStation" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="393dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvArriveCity" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Rp166.000,00"
+            android:textColor="@color/primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBookNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="book now"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvPrice" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layoutStar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/secondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDepartDate">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_margin="2dp"
+                    android:src="@drawable/ic_star"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="44dp"
+                    android:text="4,8/5"
+                    android:textColor="@color/brown"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/imageView3"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

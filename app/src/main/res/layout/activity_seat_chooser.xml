@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.bus.SeatChooserActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/ivBackArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_round_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/ivBrand"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Choose seats" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="SpeakableTextPresentCheck">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="100"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            tools:ignore="NestedWeights">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="16dp"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:visibility="invisible"
+                                tools:text="0" />
+
+                            <TextView
+                                android:layout_width="36dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="4dp"
+                                android:text="A"
+                                android:textAlignment="center"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="36dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:text="B"
+                                android:textAlignment="center"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="36dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="4dp"
+                                android:text="C"
+                                android:textAlignment="center"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="36dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:text="D"
+                                android:textAlignment="center"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="100"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            tools:ignore="NestedWeights">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="16dp"
+                                android:text="1"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatA1"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginEnd="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatB1"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginStart="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center">
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatC1"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginEnd="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatD1"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginStart="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="100"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            tools:ignore="NestedWeights">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="16dp"
+                                android:text="2"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatA2"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginEnd="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatB2"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginStart="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center">
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatC2"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginEnd="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatD2"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginStart="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="100"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            tools:ignore="NestedWeights">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="16dp"
+                                android:text="3"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatA3"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginEnd="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatB3"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginStart="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center">
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatC3"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginEnd="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatD3"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginStart="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="100"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            tools:ignore="NestedWeights">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="16dp"
+                                android:text="4"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatA4"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginEnd="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatB4"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginStart="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center">
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatC4"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginEnd="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatD4"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginStart="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="100"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            tools:ignore="NestedWeights">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="16dp"
+                                android:text="5"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatA5"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginEnd="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatB5"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginStart="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center">
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatC5"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginEnd="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatD5"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginStart="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="100"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            tools:ignore="NestedWeights">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="16dp"
+                                android:text="6"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatA6"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginEnd="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatB6"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginStart="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center">
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatC6"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginEnd="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatD6"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginStart="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="100"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            tools:ignore="NestedWeights">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="16dp"
+                                android:text="7"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatA7"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginEnd="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatB7"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginStart="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center">
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatC7"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginEnd="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatD7"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginStart="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="100"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            tools:ignore="NestedWeights">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="16dp"
+                                android:text="8"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatA8"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginEnd="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatB8"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginStart="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center">
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatC8"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginEnd="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:clickable="true"/>
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatD8"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginStart="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:clickable="true" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="100"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            tools:ignore="NestedWeights">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="16dp"
+                                android:text="9"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatA9"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginEnd="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatB9"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginStart="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false"
+                                tools:ignore="TooManyViews" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center">
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatC9"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginEnd="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatD9"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginStart="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="100"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            tools:ignore="NestedWeights">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="45dp"
+                                android:text="10"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatB10"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginStart="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center">
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatC10"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginEnd="4dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                            <CheckedTextView
+                                android:id="@+id/ivSeatD10"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:background="@drawable/seat_selector"
+                                android:checked="false" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            android:elevation="8dp"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Selected: 0/0"
+                android:textColor="@color/primaryLight"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:text="Your Seat"
+                    app:drawableStartCompat="@drawable/ic_ellipse"
+                    tools:ignore="NestedWeights,TextContrastCheck" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:text="Booked"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:drawableStartCompat="@drawable/ic_ellipse"
+                    app:drawableTint="@color/gray64" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:text="Available"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:drawableStartCompat="@drawable/ic_ellipse"
+                    app:drawableTint="@color/grayEd" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBookNow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Book Now"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

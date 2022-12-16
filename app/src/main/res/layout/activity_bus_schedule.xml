@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.bus.BusScheduleActivity"
+    android:background="@color/bg"
+    android:padding="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        app:cardCornerRadius="12dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvDep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Depture"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/departure"
+                android:layout_below="@id/tvDep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:text="Semarang"/>
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_below="@id/tvDep"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_drop_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_alignParentRight="true"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        app:cardCornerRadius="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvArv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Arrival"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/arrival"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvArv"
+                android:text="Demak"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_below="@id/tvArv"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_drop_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card3"
+        android:layout_below="@id/card1"
+        android:layout_marginTop="10dp"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp">
+        <RelativeLayout
+            android:id="@+id/btnDateSelect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fri, 23 July 2022"
+                android:textSize="16dp" />
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card4"
+        android:layout_toRightOf="@id/card3"
+        android:layout_below="@id/card1"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp">
+        <RelativeLayout
+            android:id="@+id/seatSelect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/seats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seat 2"
+                android:textSize="16dp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/card3"
+        android:layout_marginTop="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/item_trip_ticket_layout" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:layout_gravity="center"
+        android:id="@+id/empty_state"
+        layout="@layout/empty_state_ticket_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="54dp"
+        android:layout_height="28dp"
+        android:layout_margin="32dp"
+        android:src="@drawable/bux_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/illustration"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:layout_marginBottom="88dp"
+        android:src="@drawable/john_illust"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="360dp"
+        android:layout_height="280dp"
+        app:cardElevation="8dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="20dp"
+            android:layout_marginEnd="20dp">
+
+            <TextView
+                android:id="@+id/departureTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="10dp"
+                android:text="Departure"
+                android:textColor="@color/label"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/departure"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/departureTv"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custum_input"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="15dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="12dp"
+                android:hint="@string/str_try_departure"
+                android:textColor="@color/primary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/departure"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/underline" />
+
+
+            <TextView
+                android:id="@+id/arrivalTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/departure"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="20dp"
+                android:text="Arrival"
+                android:textColor="@color/label"
+                android:textSize="12dp" />
+
+
+            <TextView
+                android:id="@+id/arrival"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/arrivalTv"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custum_input"
+                android:drawableStart="@drawable/ic_arrival"
+                android:drawablePadding="15dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="12dp"
+                android:hint="@string/str_try_arrival"
+                android:textColor="@color/primary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/arrival"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/underline" />
+
+            <TextView
+                android:id="@+id/passangersTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/arrival"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="20dp"
+                android:text="Passangers"
+                android:textColor="@color/label"
+                android:textSize="12dp" />
+
+            <EditText
+                android:id="@+id/passangers"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/passangersTv"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custum_input"
+                android:drawableStart="@drawable/ic_people_custom"
+                android:textColor="@color/primary"
+                android:drawablePadding="15dp"
+                android:textIsSelectable="false"
+                android:focusable="false"
+                android:hint="Passangers"
+                android:text="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="12dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/passangers"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/underline" />
+
+
+            <TextView
+                android:id="@+id/dateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/arrival"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/passangers"
+                android:text="Date"
+                android:textColor="@color/label"
+                android:textSize="12dp" />
+
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/dateTv"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/passangers"
+                android:textColor="@color/primary"
+                android:background="@drawable/custum_input"
+                android:drawableStart="@drawable/ic_calender"
+                android:drawablePadding="15dp"
+                android:hint="@string/str_select_date"
+                android:paddingStart="10dp"
+                android:paddingEnd="12dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/date"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="-20dp"
+                android:layout_toRightOf="@+id/passangers"
+                android:background="@drawable/underline" />
+
+            <ImageView
+                android:id="@+id/streetImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/departure"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="-3dp"
+                android:src="@drawable/street" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Search BUS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".ui.payment.BankTransferVerificationActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/ivBackArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_round_arrow_back_24" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/payment" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appbar_layout"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/layout_totalPayment"
+                    layout="@layout/layout_total_payment" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_marginBottom="100dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="20dp">
+
+                            <ImageView
+                                android:id="@+id/ivBankLogo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:padding="2dp"
+                                app:srcCompat="@drawable/ic_bank_bni" />
+
+                            <TextView
+                                android:id="@+id/tvBankName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:layout_weight="1"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                tools:ignore="NestedWeights"
+                                tools:text="BNI Mobile banking" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@drawable/underline" />
+
+                        <TextView
+                            android:id="@+id/tvStepsFirst"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:lineSpacingExtra="5dp"
+                            android:padding="20dp"
+                            android:text="1. Select transfer\n2. In sub menu select virtual account transfer\n3. Type this number in the field"
+                            android:textColor="@color/text"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvPaymentNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grayFA"
+                            android:gravity="center"
+                            android:padding="20dp"
+                            android:text="230719-0001"
+                            android:textColor="@color/primaryLight"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvStepsSecond"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:lineSpacingExtra="5dp"
+                            android:padding="20dp"
+                            android:text="4. After you press continue, input this number to the transfer amont field"
+                            android:textColor="@color/text"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/totalPaymentTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/grayFA"
+                            android:gravity="center"
+                            android:padding="20dp"
+                            android:textColor="@color/icon"
+                            android:textStyle="bold"
+                            tools:text="Rp332.333,00" />
+
+                        <TextView
+                            android:id="@+id/tvStepsThird"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="20dp"
+                            android:text="5. Don't forget to keep the receipt for verification process"
+                            android:textColor="@color/text"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnVerifyPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/verify_payment" />
+
+</RelativeLayout>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".ui.payment.CreditCardVerificationActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/ivBackArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_round_arrow_back_24" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/payment" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Payment_cv"
+        android:layout_below="@+id/appbar_layout"
+        android:layout_marginHorizontal="17dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/total_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/total_payment"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalPaymentTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="33dp"
+                android:text="@string/harga"
+                android:textColor="@color/primary"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="36dp"
+                android:layout_below="@+id/total_tv"
+                android:background="@drawable/custom_ractangle" />
+
+            <TextView
+                android:id="@+id/underline"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="73dp"
+                android:background="@drawable/underline" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="85dp"
+                android:layout_marginBottom="11dp"
+                android:text="@string/note_total_payment"
+                android:textColor="@color/text"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/Payment_cv"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/layout_totalPayment"
+                    layout="@layout/layout_total_payment" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_marginBottom="100dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/card_number"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/cardNumber_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/selector_input_card"
+                            android:drawableStart="@drawable/ic_cc_visa"
+                            android:drawablePadding="20dp"
+                            android:hint="@string/str_hide_number"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:padding="16dp"
+                            android:textColor="@color/text"
+                            android:textStyle="bold"
+                            tools:ignore="TextContrastCheck" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/valid_until"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/month_et"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/selector_input"
+                                android:hint="@string/str_month"
+                                android:importantForAutofill="no"
+                                android:inputType="number"
+                                android:padding="16dp"
+                                android:textColor="@color/text"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                tools:ignore="TextContrastCheck" />
+
+                            <EditText
+                                android:id="@+id/year_et"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/selector_input"
+                                android:drawablePadding="20dp"
+                                android:hint="@string/str_year"
+                                android:importantForAutofill="no"
+                                android:inputType="number"
+                                android:minHeight="48dp"
+                                android:padding="16dp"
+                                android:textColor="@color/text"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                tools:ignore="TextContrastCheck" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/Card_holder"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/surename_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/selector_input"
+                            android:drawablePadding="20dp"
+                            android:hint="@string/surename"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:padding="16dp"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/str_vcc"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/vcc_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/selector_input"
+                                android:hint="@string/str_vcc"
+                                android:importantForAutofill="no"
+                                android:inputType="number"
+                                android:padding="16dp"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                tools:ignore="TextContrastCheck" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="1"
+                                android:text="@string/str_credit_description" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnVerifyPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/verify_payment"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

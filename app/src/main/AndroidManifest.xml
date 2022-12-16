@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_bux"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_bux_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Bux"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.payment.CreditCardVerificationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Bux.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.payment.RetailPaymentVerificationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Bux.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.payment.DetailPaymentActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Bux.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.payment.BankTransferVerificationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Bux.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.bus.BusScheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.payment.BankTransferActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Bux.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.payment.PaymentMethod"
+            android:exported="false"
+            android:theme="@style/Theme.Bux.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.bus.SeatChooserActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Bux.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.chooser.DatePickerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.chooser.DestinationChooserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.bus.BusDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Bux.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.ticket.OrderDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.loginregister.FinishRegisActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Bux.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.loginregister.SetupPhoneActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Bux.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.loginregister.LoginRegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Bux.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.SplashScreen"
+            android:exported="true"
+            android:theme="@style/Theme.Bux.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Bux.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+    </application>
+
+</manifest>

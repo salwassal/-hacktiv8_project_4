@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Bux</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="ticket">Ticket</string>
+    <string name="profile">Profile</string>
+    <string name="str_try_departure">Semarang</string>
+    <string name="str_try_arrival">Bandung</string>
+    <string name="str_select_date">Select date</string>
+    <string name="str_hide_number">**** **** **** ****</string>
+    <string name="str_month">Month</string>
+    <string name="str_year">Year</string>
+    <string name="str_vcc">VCC</string>
+    <string name="str_credit_description">Last three digit on your card</string>
+    <string name="str_bank_steps_first">1. Select transfer\n2. In sub menu select virtual account transfer\n3. Type this number in the field </string>
+    <string name="payment">Payment</string>
+    <string name="total_payment">Total payment</string>
+    <string name="harga">Rp332.333,00</string>
+    <string name="note_total_payment">please select one of the payment method below</string>
+    <string name="bank_transfer">Bank transfer</string>
+    <string name="bni_mobile_banking">BNI Mobile banking</string>
+    <string name="select">select</string>
+    <string name="cimb_mobile_banking">CIMB Niaga Mobile banking</string>
+    <string name="credit_card">Credit card</string>
+    <string name="retail_payment">Retail payment</string>
+    <string name="card_number">Card number</string>
+    <string name="valid_until">Valid until</string>
+    <string name="Card_holder">Card holder</string>
+    <string name="surename">Surename</string>
+    <string name="verify_payment">Verify Payment</string>
+</resources>

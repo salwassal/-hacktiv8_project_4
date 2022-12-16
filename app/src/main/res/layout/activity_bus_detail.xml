@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.bus.BusDetailActivity">
+
+    <ScrollView
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/backbutton"
+                android:layout_width="40dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                style="@style/Theme.Bux.Backbutton"
+                android:src="@drawable/ic_round_arrow_back_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book a trip"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/backbutton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/backbutton" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardIvBus"
+                android:layout_width="348dp"
+                android:layout_height="240dp"
+                android:layout_marginTop="32dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title">
+
+                <ImageView
+                    android:id="@+id/ivBus"
+                    android:layout_width="348dp"
+                    android:layout_height="240dp"
+                    tools:src="@tools:sample/backgrounds/scenic"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardNameBus"
+                android:layout_width="206dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="-18dp"
+                android:layout_marginStart="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:layout_constraintStart_toStartOf="@+id/cardIvBus"
+                app:layout_constraintTop_toBottomOf="@+id/cardIvBus">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/nameBus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="-"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/icStar"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_baseline_star_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tvRating"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:text="-/10"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSeePicture"
+                app:elevation="8dp"
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="see picture"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/cardNameBus"
+                app:layout_constraintEnd_toEndOf="@+id/cardIvBus"
+                app:layout_constraintTop_toTopOf="@+id/cardNameBus" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Friday,  23 Jul 2019"
+                app:layout_constraintStart_toStartOf="@+id/cardIvBus"
+                app:layout_constraintTop_toBottomOf="@+id/cardIvBus" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="348dp"
+                android:layout_height="136dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDate">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/departCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="28sp"
+                        android:text="-"
+                        android:textColor="@color/primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/departTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/departCity"
+                        app:layout_constraintTop_toBottomOf="@+id/departCity" />
+
+                    <TextView
+                        android:id="@+id/labelDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Date"
+                        app:layout_constraintStart_toStartOf="@+id/departTime"
+                        app:layout_constraintTop_toBottomOf="@+id/departTime" />
+
+                    <TextView
+                        android:id="@+id/departDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        app:layout_constraintStart_toStartOf="@+id/labelDate"
+                        app:layout_constraintTop_toBottomOf="@+id/labelDate" />
+
+                    <TextView
+                        android:id="@+id/destinationCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28sp"
+                        android:layout_marginEnd="16dp"
+                        android:text="-"
+                        android:textColor="@color/primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/destinationTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="00:00"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/destinationCity"
+                        app:layout_constraintTop_toBottomOf="@+id/destinationCity" />
+
+                    <TextView
+                        android:id="@+id/etaTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:text="-"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/labelBusNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Bus No."
+                        app:layout_constraintEnd_toEndOf="@+id/destinationTime"
+                        app:layout_constraintTop_toBottomOf="@+id/destinationTime" />
+
+                    <TextView
+                        android:id="@+id/tvBusNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        app:layout_constraintEnd_toEndOf="@+id/labelBusNo"
+                        app:layout_constraintTop_toBottomOf="@+id/labelBusNo" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/labelSeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Available seat"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/cardView2"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+            <TextView
+                android:id="@+id/tvSeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="- Seat are available"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/labelSeat"
+                app:layout_constraintStart_toStartOf="@id/labelSeat"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 x 2 Seats arrangement"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvSeat"
+                app:layout_constraintEnd_toEndOf="@+id/cardIvBus"
+                app:layout_constraintTop_toTopOf="@+id/tvSeat" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/stickyPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="16dp"
+        android:minHeight="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvCalculation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:text="2 x 166.000,00"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvFinalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp332.000,00"
+            android:textSize="18sp"
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvCalculation"
+            app:layout_constraintTop_toBottomOf="@+id/tvCalculation" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBookNow"
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:minHeight="48dp"
+            android:text="Book now"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
